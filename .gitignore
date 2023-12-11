@@ -68,6 +68,7 @@ instance/
 # Scrapy stuff:
 .scrapy
 *.xlsx
+getmetrics copy.py
 
 # Sphinx documentation
 docs/_build/
