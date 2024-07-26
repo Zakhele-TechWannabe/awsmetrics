@@ -21,8 +21,8 @@ connect = boto3.client('connect', region_name=region)
 
 params = {
     "ResourceArn": resource_arn,
-    "StartTime": datetime(2023, 12, 1),
-    "EndTime": datetime(2023, 12, 10),
+    "StartTime": datetime(2024, 6, 1),
+    "EndTime": datetime(2024, 6, 23),
     "Interval": {
         "TimeZone": "UTC",
         "IntervalPeriod": "WEEK"
@@ -119,7 +119,7 @@ for metric in pivot_df.index:
 pivot_df['Total'] = pd.Series(totals)
 
 current_date = datetime.now().strftime("%Y-%m-%d")
-excel_file = f"December_{current_date}.xlsx"
+excel_file = f"June_{current_date}.xlsx"
 pivot_df.to_excel(excel_file, index=True)
 
 for result in metric_results:
